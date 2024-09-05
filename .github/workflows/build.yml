@@ -1,0 +1,26 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - "**"
+
+jobs:
+  Continuous-Integration:
+    name: Perform new push check in project
+    runs-on: ubuntu:lastest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20.x"
+
+      - name: Install Dependencies
+        run: npm install --lagacy-peer-deps
+        
+      - name: Build project
+        run: npm run build
