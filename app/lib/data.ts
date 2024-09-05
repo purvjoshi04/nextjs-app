@@ -8,8 +8,10 @@ const ITEMS_PER_PAGE = 6;
 // Fetch revenue data
 export async function fetchRevenue(): Promise<Revenue[]> {
   try {
+    console.log('Fetching revenue data...');
+    await new Promise((resolve) => setTimeout(resolve, 3000));
     const data = await sql`SELECT month, revenue FROM revenue`;
-
+    console.log('Data fetch completed after 3 seconds.');
     // Ensure that the data conforms to the Revenue type
     const formattedData: Revenue[] = data.map(row => ({
       month: row.month,
@@ -60,6 +62,7 @@ export async function fetchCardData() {
       `,
     ]);
 
+    
     return {
       numberOfInvoices: Number(invoiceCount[0].count),
       numberOfCustomers: Number(customerCount[0].count),
