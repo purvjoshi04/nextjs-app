@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@heroicons/react':
-        specifier: ^2.1.4
-        version: 2.1.4(react@19.0.0-rc-f38c22b244-20240704)
+        specifier: ^2.1.5
+        version: 2.1.5(react@19.0.0-rc-f38c22b244-20240704)
       '@neondatabase/serverless':
         specifier: ^0.9.5
         version: 0.9.5
@@ -93,8 +93,8 @@ packages:
   '@emnapi/runtime@1.2.0':
     resolution: {integrity: sha512-bV21/9LQmcQeCPEg3BDFtvwL6cwiTMksYNWQQ4KOxCZikEGalWtenoZ0wCiukJINlGCIi2KXx01g4FoH/LxpzQ==}
 
-  '@heroicons/react@2.1.4':
-    resolution: {integrity: sha512-ju0wj0wwrUTMQ2Yceyrma7TKuI3BpSjp+qKqV81K9KGcUHdvTMdiwfRc2cwXBp3uXtKuDZkh0v03nWOQnJFv2Q==}
+  '@heroicons/react@2.1.5':
+    resolution: {integrity: sha512-FuzFN+BsHa+7OxbvAERtgBTNeZpUjgM/MIizfVkSCL2/edriN0Hx/DWRCR//aPYwO5QX/YlgLGXk+E3PcfZwjA==}
     peerDependencies:
       react: '>= 16'
 
@@ -1212,7 +1212,7 @@ snapshots:
       tslib: 2.6.3
     optional: true
 
-  '@heroicons/react@2.1.4(react@19.0.0-rc-f38c22b244-20240704)':
+  '@heroicons/react@2.1.5(react@19.0.0-rc-f38c22b244-20240704)':
     dependencies:
       react: 19.0.0-rc-f38c22b244-20240704
 
