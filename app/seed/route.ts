@@ -111,10 +111,12 @@ export async function GET() {
     await sql`COMMIT`;
 
     return new Response(JSON.stringify({ message: 'Database seeded successfully' }), { status: 200 });
-  }catch (error: any) {
-    await sql`ROLLBACK`;
-    return new Response(JSON.stringify({ error: error.message }), { status: 500 });
-  } finally {
-    // sql.end(); // Ensure the connection is closed after the operation
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      await sql`ROLLBACK`;
+      return new Response(JSON.stringify({ error: error.message }), { status: 500 });
+    } else {
+      return new Response(JSON.stringify({ error: 'An unknown error occurred' }), { status: 500 });
+    }
   }
 }
